@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="26dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnLlamarTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Llamar la clase Teléfono"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="26dp"
+            android:visibility="gone"> <!-- Oculto inicialmente -->
+            
+            <TextView
+                android:id="@+id/textViewMostrarInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:background="#e0e0e0"
+                android:padding="8dp"
+                android:visibility = "gone" 
+                android:textSize="18sp" /> <!-- oculto inicialmente -->
+
+            
+            <!-- Botón para mostrar información -->
+            <Button
+                android:id="@+id/btnMostrarInformacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Información"
+                android:layout_marginTop="8dp"/>
+
+            
+            <Button
+                android:id="@+id/btnUsarBateria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usar Batería (30%)"
+                android:layout_marginTop="16dp" />
+            
+            <Button
+                android:id="@+id/btnCargarBateria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargar Batería (50%)"
+                android:layout_marginTop="8dp" />
+
+            <!-- Botón para recargar saldo -->
+            <Button
+                android:id="@+id/btnRecargarSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recargar Saldo"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Agrega una linea divisora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="#CCCCCC"/>
+
+
+            <!-- input para ingresar el precio y poder comprar el telefono -->
+            <EditText
+                android:id="@+id/editTextPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese el precio del Telefono para comprarlo"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="16dp" />
+
+            <!-- Botón para asignar precio y comprar el telefono -->
+            <Button
+                android:id="@+id/btnAsignarPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comprar Telefono"
+                android:layout_marginTop="8dp"/>
+                
+
+            <!-- Agrega una linea divisora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="#CCCCCC"
+                />
+
+            <!-- input para ingresar la cantidad de saldo a regalar -->
+            <EditText
+                android:id="@+id/editTextRegalarSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese saldo a regalar"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="16dp" />
+
+            <!-- input para ingresar el numero destino -->
+            <EditText
+                android:id="@+id/editTextRegalarSaldoNumeroDestino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese el numero destino"
+                android:inputType="number"
+                android:layout_marginTop="16dp" />
+
+            <!-- Botón para regalar saldo -->
+            <Button
+                android:id="@+id/btnRegalarSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regalar Saldo"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Agrega una linea divisora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="#CCCCCC"/>
+
+            <!-- input para ingresar la tarifa por minuto -->
+            <EditText
+                android:id="@+id/editTextTarifa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese nueva tarifa por minuto"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="16dp" />
+
+            <!-- Botón para cambiar tarifa -->
+            <Button
+                android:id="@+id/btnCambiarTarifa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar Tarifa"
+                android:layout_marginTop="8dp"/>
+        
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
