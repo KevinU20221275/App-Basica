@@ -43,6 +43,7 @@ class Telefono {
 
     // metodo para recargar saldo
     fun recargarSaldo(cantidad: Float) : String {
+        // si el telefono no ha sido comprado por el usuario retorna un mensaje y no hace nada
         if (!vendido) {
             return "Error: Debe comprar el telefono primero"
         }
@@ -53,11 +54,12 @@ class Telefono {
 
     // metodo para regalar saldo
     fun regalarSaldo(cantidad: Float, numeroDestino : String) : String {
-
+        // si el telefono no ha sido comprado por el usuario retorna un mensaje y no hace nada
         if (!vendido) {
             return "Error: Debe comprar el telefono primero"
         }
 
+        // si el saldo es menor a la cantidad ingresada retorna un mensaje de saldo insuficiente
         if (saldo < cantidad){
             return "Error: Saldo insuficiente"
         } else {
@@ -68,10 +70,11 @@ class Telefono {
 
     // metodo para cambiar el costo por minuto
     fun cambioDeTarifa(cantidad: Float) : String {
-        if (!vendido) {
+        if (!vendido) { // si el telefono no ha sido comprado por el usuario retorna un mensaje y no hace nada
             return "Error: Debe comprar el telefono primero"
         }
 
+        // si la cantidad es menor o igual a cero retorna un mensaje de error y no cambia la tarifa
         if (cantidad <= 0){
             return "La tarifa debe ser mayor a cero"
         } else {
@@ -85,13 +88,13 @@ class Telefono {
         if (precio <= 0){
             return "El precio debe ser mayor a 0"
         } else {
-            vendido = true
-            this.precio = precio
-            return "Compro el telefono por $precio"
+            vendido = true // cambia vendido a true
+            this.precio = precio // asigna el precio
+            return "Compro el telefono por $precio" // devuelve un mensaje para mostrarlo en la view
         }
     }
 
-    // mostrar informacion
+    // mostrar informacion, retorna toda la infomacion del telefono como un String
     fun mostrarInformacion() : String {
         val info : String = "📱 Información del Teléfono\n" +
         "Marca: $marca \n" +

@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Configruar el boton "Asignar Precio"
-        val editPrecioTelefono = findViewById<EditText>(R.id.editTextPrecio)
+        val editPrecioTelefono = findViewById<EditText>(R.id.editTextPrecio) // input para ingresar el precio
         val btnAsignarPrecio = findViewById<Button>(R.id.btnAsignarPrecio)
         btnAsignarPrecio.setOnClickListener {
             val textPrecio = editPrecioTelefono.text.toString()
@@ -118,6 +118,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Función para actualizar el TextView
+    // ahora actualizar texto usa el metodo mostrarInformacion para mostrar toda la informacion del telefono
     private fun actualizarTexto() {
         textViewResultado.text = miTelefono.mostrarInformacion().trimIndent()
     }
