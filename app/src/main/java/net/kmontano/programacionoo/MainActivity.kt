@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         // Inicializar vistas
         val btnLlamarTelefono = findViewById<Button>(R.id.btnLlamarTelefono)
         layoutContenido = findViewById(R.id.layoutContenido)
+        textViewResultado = findViewById(R.id.textViewMostrarInfo)
 
         // Configurar el botón inicial
         btnLlamarTelefono.setOnClickListener {
@@ -51,15 +52,15 @@ class MainActivity : AppCompatActivity() {
         // Configurar el boton "Recargar Saldo"
         val btnRecargarSaldo = findViewById<Button>(R.id.btnRecargarSaldo)
         btnRecargarSaldo.setOnClickListener {
-
             val mensaje : String = miTelefono.recargarSaldo(2.00F) // recargara $2.00 de saldo
+
             Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
             actualizarTexto()
         }
 
         // Configurar el boton regalar saldo
         val editTextRegalarSaldo = findViewById<EditText>(R.id.editTextRegalarSaldo) // input para ingresar el monto a regalar
-        val editTextNumeroDestino = findViewById<EditText>(R.id.editTextRegalarSaldoNumeroDestino)
+        val editTextNumeroDestino = findViewById<EditText>(R.id.editTextRegalarSaldoNumeroDestino) // input para ingresar el numero de destino
         val btnRegalarSaldo = findViewById<Button>(R.id.btnRegalarSaldo)
         btnRegalarSaldo.setOnClickListener {
             val saldoTexto = editTextRegalarSaldo.text.toString()
@@ -103,7 +104,6 @@ class MainActivity : AppCompatActivity() {
         // Configurar el boton "Mostrar Información"
         val btnMostrarInformacion = findViewById<Button>(R.id.btnMostrarInformacion)
         btnMostrarInformacion.setOnClickListener {
-            textViewResultado = findViewById(R.id.textViewMostrarInfo)
             actualizarTexto() // Mostrar estado inicial
             textViewResultado.visibility = View.VISIBLE
         }
